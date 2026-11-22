@@ -5,92 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IoT Smart Cart - Project Resources</title>
     <style>
-        /* Base styles */
+        /* Base styles & Background */
         body {
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            color: #ffffff;
+            /* High-tech circuit background */
+            background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
-        /* Card container */
-        .card {
-            background-color: #ffffff;
+
+        /* Optional: Dark overlay to make text readable */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(10, 10, 25, 0.6); /* Dark blue/purple tint */
+            z-index: -1;
+        }
+
+        /* Frosted Glass Card */
+        .glass-card {
+            background: rgba(20, 20, 35, 0.45);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 40px 30px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
             text-align: center;
             max-width: 400px;
             width: 90%;
-            border-top: 8px solid #003399; /* TUT Blue */
+            z-index: 1;
         }
+
         /* Typography */
         h1 {
-            color: #003399;
-            font-size: 24px;
+            color: #ffffff;
+            font-size: 26px;
             margin-top: 0;
             margin-bottom: 8px;
             line-height: 1.2;
+            text-shadow: 0 0 10px rgba(170, 0, 255, 0.5); /* Neon purple glow */
         }
+        
         h2 {
-            color: #666;
+            color: #a0a0c0;
             font-size: 15px;
-            font-weight: 500;
+            font-weight: 400;
             margin-top: 0;
             margin-bottom: 30px;
+            line-height: 1.4;
         }
+
         /* Buttons */
         .btn {
             display: block;
             width: 100%;
             padding: 16px;
             margin-bottom: 15px;
-            border: none;
-            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
             font-size: 16px;
             font-weight: 600;
             text-decoration: none;
             color: #ffffff;
-            transition: transform 0.1s ease, background-color 0.3s ease;
+            transition: all 0.3s ease;
             box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
         }
-        .btn:active {
-            transform: scale(0.98);
-        }
+
+        /* Video Button - Neon Pink/Purple */
         .btn-video {
-            background-color: #CC0000; /* TUT Red */
+            background: linear-gradient(135deg, rgba(180, 0, 255, 0.4) 0%, rgba(80, 0, 255, 0.4) 100%);
+            box-shadow: 0 0 15px rgba(180, 0, 255, 0.2);
         }
         .btn-video:hover {
-            background-color: #a30000;
+            background: linear-gradient(135deg, rgba(180, 0, 255, 0.6) 0%, rgba(80, 0, 255, 0.6) 100%);
+            box-shadow: 0 0 20px rgba(180, 0, 255, 0.4);
+            transform: translateY(-2px);
         }
+
+        /* Document Buttons - Cyan/Blue */
         .btn-doc {
-            background-color: #003399; /* TUT Blue */
+            background: linear-gradient(135deg, rgba(0, 200, 255, 0.2) 0%, rgba(0, 100, 255, 0.2) 100%);
+            box-shadow: 0 0 15px rgba(0, 200, 255, 0.1);
         }
         .btn-doc:hover {
-            background-color: #002266;
+            background: linear-gradient(135deg, rgba(0, 200, 255, 0.4) 0%, rgba(0, 100, 255, 0.4) 100%);
+            box-shadow: 0 0 20px rgba(0, 200, 255, 0.3);
+            transform: translateY(-2px);
         }
+
+        /* Subtext */
+        .subtext {
+            font-size: 12px;
+            color: #8888aa;
+            margin-top: -5px;
+            margin-bottom: 20px;
+        }
+
         /* Footer */
         .footer {
             margin-top: 30px;
             font-size: 12px;
-            color: #999;
-            line-height: 1.5;
+            color: #666688;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
+    <div class="glass-card">
         <h1>IoT-Enabled Smart Shopping Cart</h1>
         <h2>Naledi Perseverance Mashabane<br>230099774</h2>
 
-        <!-- Video Button (Update the href="#" when the video is ready) -->
+        <!-- Video Button (Update href="#" when the video is ready) -->
         <a href="#" class="btn btn-video" target="_blank">▶ Watch Demo Video</a>
-        <p style="font-size: 12px; color: #999; margin-top: -5px; margin-bottom: 20px;">(Video link coming soon)</p>
+        <p class="subtext">(Video link coming soon)</p>
 
         <!-- Document Buttons -->
         <a href="docs/Technical_Report.pdf" class="btn btn-doc" target="_blank" download>📄 Download Technical Report</a>
